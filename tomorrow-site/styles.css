@@ -1,0 +1,632 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color:#25292e;
+}
+
+nav{
+    width:100vw;
+    height:auto;
+    background-color:white;
+    box-sizing:border-box;
+    box-shadow: 0px 3px 22px 3px rgba(0,0,0,0.25);
+    position:sticky;
+    top:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:0.3rem;
+    padding-bottom:0.3rem;
+}
+.navmenu{
+    display:flex;
+    justify-content:center;
+    align-items:baseline;
+    flex-wrap:wrap;
+}
+.navmenu .logonav{
+    flex-grow:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.navmenu .logonav img{
+    width:90px;
+}
+.navmenu .navlinks{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-grow:1;
+    flex-wrap:wrap;
+}
+.navlinks a{
+    text-decoration:none;
+    color:#25292e;
+    font-size:0.9rem;
+    font-weight:400;
+    padding:0.5rem 1.5rem;
+    margin: 0 40px;
+    line-height:2rem;
+    transition: all 0.25s ease-in;
+}
+.navmenu .navlinks a:hover{
+    font-size:0.95rem;
+    color:#b6593b;
+    box-shadow: 0px 1px 12px 5px rgba(0,0,0,0.47);
+}
+.navmenu .navlinks #navbtn{
+    background-color:#b6593b;
+    border-radius:50px;
+    box-shadow:none;
+    color:white;
+    text-align:center;
+    padding:0.5rem 2rem;
+}
+.navmenu .navlinks #navbtn:hover{
+    background-color:#b65a3bbb;
+}
+
+header{
+    height:92vh;
+    max-height:92vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-sizing:border-box;
+}
+header .headertext{
+width:50vw;
+min-width:528px;
+padding-left:95px;
+padding-right:125px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:flex-start;
+box-sizing:border-box;
+}
+.headertext h1{
+    font-size:4.5rem;
+    font-weight:600;
+    line-height:5rem;
+    padding-bottom: 50px;
+    padding-top:40px;
+    border-bottom:1px solid #25292e;
+}
+.headertext p{
+    font-size:1.4rem;
+    font-weight:400;
+    line-height:1.8rem;
+    padding-top:20px;
+    margin-bottom:68px;
+}
+.headertext button{
+    border:none;
+    font-size:1.2rem;
+    font-weight:400;
+    padding:1.3rem 4rem;
+    background-color:#b6593b;
+    color:white;
+    border-radius:50px;
+    transition:all 0.5s ease-in;
+}
+.headertext button:hover{
+    background-color:#b65a3bbb;
+    cursor:pointer;
+}
+header .headerimg{
+    width:50vw;
+    height:92vh;
+    box-sizing:border-box;
+    background-image: url(img/header-img.png);
+    background-position: center;
+    background-size:cover;
+}
+.data{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.data .datacontainer{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:baseline;
+    width:100vw;
+    margin:30px 0;
+
+}
+.datacontainer p:first-of-type{
+    font-size:2.3rem;
+}
+.datacontainer p:nth-of-type(2){
+    font-size:0.7rem;
+    color:rgba(0, 0, 0, 0.769);
+}
+
+.conventionalsection{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.conventionalsection .conventionalimg{
+    width:50vw;
+    min-width:600px;
+    display:flex;
+    justify-content:center;
+    align-items:Center;
+    flex-grow:1;
+}
+.conventionalimg img{
+    width:35vw;
+    min-width:300px;
+}
+.conventionaltext{
+    width:50vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    flex-grow:1;
+    
+}
+.conventionaltext div{
+    padding:80px 60px;
+    margin:auto;
+}
+.conventionaltext h3{
+    font-size:2.5rem;
+    font-weight:300;
+    line-height: 2.5rem;
+    padding-bottom:40px;
+    border-bottom: 1px solid #25292e;
+}
+.boldtext{
+    font-weight:400;
+}
+.conventionaltext p{
+    font-size:1.25rem;
+    padding-top:40px;
+}
+.conventionaltext p a{
+    text-decoration:none;
+    color:#25292e;
+    padding-right:15px;
+    transition:color 0.25s ease-in;
+}
+.conventionaltext p a:hover{
+    color:#b6593b;
+}
+.digitalbanking{
+    width:100vw;
+    background-color:#f6e8d3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap-reverse;
+    padding-top:90px;
+    
+}
+.digitalbanking .dbtext{
+    width:50vw;
+    min-width:520px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-grow:1;
+}
+.dbtext div{
+    padding:80px 80px;
+}
+.dbtext h3{
+    font-size:2.5rem;
+    font-weight:300;
+    line-height: 2.5rem;
+    padding-bottom:40px;
+    border-bottom: 1px solid #25292e;
+}
+.dbtext p{
+    font-size:1.25rem;
+    padding-top:40px;
+}
+.dbtext p a{
+    text-decoration:none;
+    color:#25292e;
+    padding-right:15px;
+    transition:color 0.25s ease-in;
+}
+.dbtext p a:hover{
+    color:#b6593b;
+}
+.digitalbanking .dbimg{
+    width:50vw;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+    align-self:flex-end;
+}
+.dbimg img{
+    width:40vw;
+    
+}
+
+.cards{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:110px 0;
+    flex-wrap:wrap;
+}
+.cards .cardsimg{
+    width:50vw;
+    min-width:400px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-grow:1;
+}
+.cardsimg img{
+    width:35vw;
+    min-width:310px;
+}
+.cards .cardstext{
+    width:50vw;
+    flex-grow:1;
+}
+.cardstext div{
+    padding:80px 80px;
+}
+.cardstext h3{
+    font-size:2.3rem;
+    font-weight:300;
+    line-height: 2.5rem;
+    padding-bottom:40px;
+    border-bottom: 1px solid #25292e;
+}
+.cards p{
+    font-size:1.25rem;
+    padding-top:40px;
+}
+.cards p a{
+    text-decoration:none;
+    color:#25292e;
+    padding-right:15px;
+    transition:color 0.25s ease-in;
+}
+.cards p a:hover{
+    color:#b6593b;
+}
+.phone{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-bottom:100px;
+    flex-wrap:wrap-reverse;
+}
+.phone .phonetext{
+        width:50vw;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-grow:1;
+    }
+    .phonetext div{
+        padding:80px 80px;
+    }
+    .phonetext h3{
+        font-size:2.5rem;
+        font-weight:300;
+        line-height: 2.5rem;
+        padding-bottom:40px;
+        border-bottom: 1px solid #25292e;
+    }
+    .phonetext p{
+        font-size:1.25rem;
+        padding-top:40px;
+    }
+    .phonetext p a{
+        text-decoration:none;
+        color:#25292e;
+        padding-right:15px;
+        transition:color 0.25s ease-in;
+    }
+    .phonetext p a:hover{
+        color:#b6593b;
+    }
+    .phone .phoneimg{
+    width:50vw;
+    min-width:400px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+    .phoneimg img{
+    width:30vw;
+    min-width:310px;
+}
+
+.solution{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.solution .solutionimg{
+    width:50vw;
+    min-width:600px;
+    display:flex;
+    justify-content:center;
+    align-items:Center;
+    flex-grow:1;
+}
+.solutionimg img{
+    width:35vw;
+    min-width:300px;
+}
+.solutiontext{
+    width:50vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    flex-grow:1;
+    
+}
+.solutiontext div{
+    padding:80px 80px;
+    margin:auto;
+}
+.solutiontext h3{
+    font-size:2.5rem;
+    font-weight:300;
+    line-height: 2.5rem;
+    padding-bottom:40px;
+    border-bottom: 1px solid #25292e;
+}
+.solutiontext p{
+    font-size:1.25rem;
+    padding-top:40px;
+}
+.solutiontext p a{
+    text-decoration:none;
+    color:#25292e;
+    padding-right:15px;
+    transition:color 0.25s ease-in;
+}
+.solutiontext p a:hover{
+    color:#b6593b;
+}
+.form{
+    width:100vw;
+    height:450px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.form p{
+    font-size:2.3rem;
+    line-height:3rem;
+    width:600px;
+    padding-bottom:20px;
+}
+.form input{
+    width:600px;
+    height:62px;
+    border:none;
+    background-color:#f3f5f6;
+    text-indent: 10px;
+    font-size:1rem;
+}
+.openaccount{
+    width:100vw;
+    height:450px;
+    background-color:#317dd7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.openaccount .openaccountcontent{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    padding:0 12vw;
+    text-align:center;
+
+}
+.openaccountcontent p{
+    font-size:2.3rem;
+    color:white;
+    padding-bottom:40px;
+    line-height:2.6rem;
+}
+.openaccountcontent button{
+    border:none;
+    background-color:white;
+    color:#b6593b;
+    font-size:1.3rem;
+    padding:1rem 3rem;
+    border-radius:50px;
+    transition:all 0.5s ease-in;
+}
+.openaccountcontent button:hover{
+    cursor:pointer;
+    background-color:#b6593b;
+    color:white;
+    font-size:1.4rem;
+}
+footer{
+    width:100vw;
+    background-color:#25292e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:75px;
+    padding-bottom:75px;
+}
+footer .footercontainer{
+    width:80vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    align-content:baseline;
+    flex-wrap:wrap;
+    margin:auto;
+    text-align:center;
+}
+.footercontent{
+    padding:20px 10px;
+}
+.footercontent p{
+    color:white;
+    font-size:1rem;
+    line-height:2rem;
+}
+.footercontent p:first-of-type{
+    font-weight:500;
+}
+
+@media (max-width:1175px){
+    .navlinks a{
+        margin:0;
+    }
+    header .headertext{
+        width:70vw;
+        padding-left:40px;
+        padding-right:70px;
+        }
+    .headertext h1{
+        font-size:3.5rem;
+        line-height:4rem;
+    }
+    header .headerimg{
+        width:30vw;
+    }
+    .conventionalimg img{
+        width:80vw;
+    }
+    .conventionaltext div{
+        padding:60px 25px;
+    }
+    .conventionaltext h3{
+        font-size:1.5rem;
+        font-weight:300;
+        line-height: 2rem;
+    }
+    .dbtext div{
+        padding:60px 25px;
+    }
+    .dbtext h3{
+        font-size:1.5rem;
+        font-weight:300;
+        line-height: 2rem; 
+    }
+    .digitalbanking{
+        padding-top:90px;  
+    }
+    .dbimg img{
+        width:50vw;
+    }
+    .cardstext div{
+        padding:60px 25px;
+    }
+    .cardstext h3{
+        font-size:1.5rem;
+        font-weight:300;
+        line-height: 2rem; 
+    }
+    .phonetext div{
+        padding:60px 25px;
+    }
+    .phonetext h3{
+        font-size:1.5rem;
+        font-weight:300;
+        line-height: 2rem; 
+    }
+    .solutionimg img{
+        width:80vw;
+    }
+    .solutiontext div{
+        padding:60px 25px;
+    }
+    .solutiontext h3{
+        font-size:1.5rem;
+        font-weight:300;
+        line-height: 2rem;
+    }
+    .openaccountcontent p{
+        font-size:1.8rem;
+    }
+}
+@media (max-width:720px){
+    .navlinks a{
+        font-size:0.9rem;
+        font-weight:400;
+        padding:0.2rem 1.1rem;
+        margin:0;
+        line-height:2rem;
+    }
+    .datacontainer p:first-of-type{
+        font-size:1.7rem;
+    }
+    .form p{
+       font-size:2rem;
+        width:70vw;
+    }
+    .form input{
+        width:70vw;
+    }
+}
